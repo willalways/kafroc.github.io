@@ -2,6 +2,7 @@
 layout: post
 title: CompTIA Security+
 category: 网络安全
+comments: true
 keywords: CompTIA,Security+,Certification,2019
 ---
 

@@ -25,8 +25,8 @@ avatar: http://kafroc.github.io/assets/img/site-avatar.png
 favicon: http://kafroc.github.io/assets/img/site-avatar.png
 
 # disqus config
-# disqus:
-#  shortname: suyan-zh
+disqus:
+  shortname: kafroc-github-io
 
 # google analytics config
 # ga:
