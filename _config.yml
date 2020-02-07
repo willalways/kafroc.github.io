@@ -4,7 +4,7 @@ email: kafocyang@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   kafroc's personal blog
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: https://kafroc.github.io # the base hostname & protocol for your site
+url: http://kafroc.github.io # the base hostname & protocol for your site
 rss_url: /pages/feed.xml
 author: kafroc
 
