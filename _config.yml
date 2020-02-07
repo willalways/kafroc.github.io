@@ -30,9 +30,9 @@ disqus:
 
 # google analytics config
 ga:
-  id: UA-157965869-1
+  id: UA-157988380-1
   url: kafroc.github.io
-google_analytics: UA-157965869-1
+google_analytics: UA-157988380-1
 
 # Build settings
 permalink: /:year/:month/:day/:title.html
