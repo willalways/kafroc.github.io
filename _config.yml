@@ -29,9 +29,10 @@ disqus:
   shortname: kafroc-github-io
 
 # google analytics config
-# ga:
-#  id: UA-54767140-1
-#  url: yansu.org
+ga:
+  id: UA-157965869-1
+  url: kafroc.github.io
+google_analytics: UA-157965869-1
 
 # Build settings
 permalink: /:year/:month/:day/:title.html
