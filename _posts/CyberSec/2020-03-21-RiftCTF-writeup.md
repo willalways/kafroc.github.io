@@ -6,7 +6,7 @@ category: 网络安全
 keywords: writewp,CTF,2020
 ---
 
-今天参加 RiftCTF 线上比赛，做了几道逆向题，这次比赛对像我这样的菜鸟比较友好，题目不会太难
+今天参加 RiftCTF 线上比赛，做了几道逆向题，这次比赛题目不会太难,对我这样的菜鸟比较友好。
 
 比赛网址 [http://riftctf.iiitnr.ac.in:8000/](http://riftctf.iiitnr.ac.in:8000/)
 
@@ -34,7 +34,7 @@ Message:
 
 文件下载地址 [chall1.elf](https://github.com/riftctf2020/rift2020/blob/master/Reverse%20Engineering/chall1.elf)
 
-题目是让你下载一个二进制文件，该二进制文件需要输入密码，密码正确程序会输出“Correct Password”。 flag 就是正确的密码.
+题目是让你下载一个二进制文件，该二进制文件需要输入密码，密码正确程序会输出“Correct Password”。 flag 就是密码.
 
 ### 解题
 
@@ -83,7 +83,7 @@ password which does that for you.
 
 文件下载地址 [chall2.elf](https://github.com/riftctf2020/rift2020/blob/master/Reverse%20Engineering/chall2.elf)
 
-题目是让你下载一个二进制文件，该二进制文件需要输入密码，密码正确程序会输出“Correct Password”。 flag 就是正确的密码.
+题目是让你下载一个二进制文件，该二进制文件需要输入密码，密码正确程序会输出“Correct Password”。 flag 就是密码.
 
 ### 解题
 
@@ -120,7 +120,7 @@ __int64 __fastcall sub_1165(__int64 a1, __int64 a2, int a3)
 
 输入密码，存放到 s，调用 sub_1165(s, unk_2030, 37)让返回值为 0 即可
 
-来看看 sub_1165 函数，看上去很复杂，各种指针。简化以下，大概是这样的
+来看看 sub_1165 函数，看上去很复杂，各种指针。简化一下，大概是这样的
 
 ```
 int sub_1165(char *a1, char *a2, int a3)
@@ -135,7 +135,7 @@ int sub_1165(char *a1, char *a2, int a3)
 }
 ```
 
-要让返回值 v4 为零， 就必须要 for 循环每次 a1[i] ^ 0x55 ^ a2[i]均为零，那么只要让每次 a1[i] == 0x55 ^ a2[i]即可，而 a2 的内容是可以从二进制中获取的
+要让返回值 v4 为零， 就必须要 for 循环每次 a1[i] ^ 0x55 ^ a2[i]均为零，那么只要让每次 a1[i] == 0x55 ^ a2[i]即可，而 a2 的内容是可以从程序中获取的
 
 把 a2 指向的 37 个字节提取出来，与 0x55 异或，即可求出 a1，也就是我要输入的 password
 
@@ -427,4 +427,4 @@ int main(int a1, char **a2, char **a3)
 }
 ```
 
-运行上面的代码就能拿到 flag 了
+运行上面的代码就能拿到 flag 了。
