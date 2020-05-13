@@ -10,12 +10,12 @@ keywords: 2020
 
 # 本教程所使用的软硬件环境
 
-1 OnePlus x 手机一台
-2 Windows 7 64 位系统
-3 QDLoader-HS-USB_Driver_64bit_Setup
-4 OnePlus_X_14_A.04_151103
-5 twrp-3.0.2-0-onyx.img
-6 nethunter-generic-armhf-kalifs-full-2020.1.zip
+1 OnePlus x 手机一台<br>
+2 Windows 7 64 位系统<br>
+3 QDLoader-HS-USB_Driver_64bit_Setup<br>
+4 OnePlus_X_14_A.04_151103<br>
+5 twrp-3.0.2-0-onyx.img<br>
+6 nethunter-generic-armhf-kalifs-full-2020.1.zip<br>
 7 platform-tools_r29.0.6-windows
 
 下文以 OPX 指代 OnePlus x， win7 指代 Windows 7 64 位系统，twrp 指代 twrp-3.0.2-0-onyx.img
@@ -28,10 +28,10 @@ keywords: 2020
 
 比如我们的电脑安装了 Windows 系统，硬盘分为两个分区，分别是 C 盘，D 盘。flash 也类似，分为多个分区（partitions）。把 ROM 的对应文件刷写到对应的分区，就完成刷机过程。
 
-在刷机之前，先了解一下手机的多种状态，就样机 OPX 而言，有 4 种状态，分别是
-1 Download 状态（高通 soc 才有，通过 9008 COM 通信）
-2 fastboot 状态
-3 Recovery 状态
+在刷机之前，先了解一下手机的多种状态，就样机 OPX 而言，有 4 种状态，分别是<br>
+1 Download 状态（高通 soc 才有，通过 9008 COM 通信）<br>
+2 fastboot 状态<br>
+3 Recovery 状态<br>
 4 Android OS 状态
 
 刷机有线刷和卡刷两类，线刷是指通过 usb 线连接手机和电脑，用工具刷 rom。 而卡刷是指把 rom 放到手机本地存储或者是 SD Card，然后通过 Recovery 进行刷机。
@@ -49,9 +49,9 @@ keywords: 2020
 
 ## 准备工作
 
-1 准备 OPX 手机一台，USB 线一根
-2 下载 QDLoader-HS-USB_Driver_64bit_Setup，[下载](https://miui.blog/any-devices/qualcomm-qdloader-hs-usb-driver/)
-3 下载 OnePlus_X_14_A.04_151103，[下载 1](https://repairmymobile.in/flash/oneplus-x-flash-file/)，[下载 2](https://firmwarefile.com/oneplus-x)
+1 准备 OPX 手机一台，USB 线一根<br>
+2 下载 QDLoader-HS-USB_Driver_64bit_Setup，[下载](https://miui.blog/any-devices/qualcomm-qdloader-hs-usb-driver/)<br>
+3 下载 OnePlus_X_14_A.04_151103，[下载 1](https://repairmymobile.in/flash/oneplus-x-flash-file/)，[下载 2](https://firmwarefile.com/oneplus-x)<br>
 4 安装 QDLoader-HS-USB_Driver_64bit_Setup，并重启电脑
 
 上面的 Stock Firmware ROM 我没找到官方发布渠道，这两个地址提供的 ROM 我无法保证安全性，刷机请谨慎。
@@ -74,8 +74,8 @@ keywords: 2020
 
 ## 准备工作
 
-1 准备 OPX 手机一台，USB 线一根
-2 下载 adb，fastboot 安卓调试工具集，[platform-tools_r30.0.1-windows.zip](https://dl.google.com/android/repository/platform-tools_r30.0.1-windows.zip)
+1 准备 OPX 手机一台，USB 线一根<br>
+2 下载 adb，fastboot 安卓调试工具集，[platform-tools_r30.0.1-windows.zip](https://dl.google.com/android/repository/platform-tools_r30.0.1-windows.zip)<br>
 3 下载 twrp，[twrp-3.0.2-0-onyx.img](https://dl.twrp.me/onyx/)
 
 ## 开始刷 Recovery
@@ -99,8 +99,8 @@ C:\Users\test\Desktop\platform-tools_r29.0.6-windows\platform-tools>fastboot.exe
 
 上图表明当前为锁定状态(Device unlocked: false)，这时输入命令 fastboot oem unlock 尝试解锁，提示"oem unlock is disabled"。 说明 fastboot 状态下无法解锁，好在查了资料发现进入氧 OS 系统的开发者模式，可以解锁 fastboot，操作如下
 
-1 重新启动设备，进入氧 OS
-2 打开 Settings -- About phone -- Build number 点击 7 次，退出 About phone， 进入 Developer options
+1 重新启动设备，进入氧 OS<br>
+2 打开 Settings -- About phone -- Build number 点击 7 次，退出 About phone， 进入 Developer options<br>
 3 使能 OEM unlocking
 
 上述操作执行完成后，重新进入 fastboot mode， 再次执行 fastboot oem unlock， 此时手机提示解锁会删除用户数据，是否继续，点击 yes，手机会重启进入氧系统，重新进入 fastboot mode，查看锁定信息，发现解锁成功了
@@ -131,7 +131,7 @@ Finished. Total time: 0.873s
 
 ## 准备工作
 
-1 准备 OPX 手机一台，USB 线一根
+1 准备 OPX 手机一台，USB 线一根<br>
 2 下载 nethunter-generic-armhf-kalifs-full-2020.1.zip，[下载 Generic ARMhf](https://www.offensive-security.com/kali-linux-nethunter-download/)
 
 ## 开始刷 kali
