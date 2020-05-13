@@ -231,7 +231,7 @@ tz -> /dev/block/mmcblk0p8
 userdata -> /dev/block/mmcblk0p28
 ```
 
-看到这些分区标签是不是很熟悉，这些文件在 Stock Firmware ROM 大多都存在，在用工具校验是，也有这些提示
+看到这些分区标签是不是很熟悉，这些文件在 Stock Firmware ROM 大多都存在，在用工具校验时，也有这些提示
 
 ![](http://kafroc.github.io/assets/img/android-kali/2020-05-13_185501.jpg)
 
@@ -273,17 +273,15 @@ dd if=/sdcard/recovery.img of=/dev/block/mmcblk0p16
 
 关机，进入 recovery 模式，发现 twrp 被覆盖回原厂 recovery 了
 
-不同的刷机方式实现的操作都是把数据写入分区，但是通过的方式是不一样的。
+我猜想线刷和卡刷的差别在于线刷（Download 模式和 fastboot 模式）的时候没有文件系统概念，只能把文件整个写入分区，只能覆盖原有分区文件。
 
-线刷（Download 模式和 fastboot 模式）的时候没有文件系统概念，只能把文件整个写入分区，只能覆盖原有分区文件。
-
-而卡刷不一样，卡刷是在 recovery 模式，而这个模式是精简版的 linux，recovery 是和 android os 同级的，在这个模式下，一方面可以直接和线刷一下写分区，也可以挂载原有系统，对 android os 做增删改，才能实现“升级”的目的。
+而卡刷不一样，卡刷是在 recovery 模式，而这个模式是精简版的 linux，recovery 是和 android os 同级的，在这个模式下，一方面可以直接和线刷一样直接写分区，也可以挂载原有 Android 文件系统，对 android 文件系统做增删改，实现升级的目的。
 
 # 使用 Android Kali
 
-在 Recovery 状态刷 kali 过程，其实是一个升级的过程，kali 包会对 boot img 做一些改动，安装 kali 文件系统，安装一些 apk 包，包括 NetHunter.apk, NetHunterStore.apk, NetHunterTerminal.apk 等，我们使用 NetHunter 时，应该是 chroot 到 kali 文件系统，这时候对于操作者来说，就像在 kali 环境一样。
+在 Recovery 状态刷 kali 过程，其实是一个升级的过程，升级 kali 的 zip 包时，会对 boot img 做一些改动，安装 kali 文件系统，安装一些 apk 包，如 NetHunter.apk, NetHunterStore.apk, NetHunterTerminal.apk 等，我们使用 NetHunter 时，应该是 chroot 到 kali 文件系统，这时候对于操作者来说，就像在 kali 环境一样。
 
-Kali 的教程网络上非常多，此处就不在各位读者面前班门弄斧了。
+Kali 的教程网络上非常多，本文就不班门弄斧了。
 
 我就做一个简单的演示，用 msf 创建一个 payload，修改本机 mac 地址，然后用 nmap 做一个端口扫描。
 
