@@ -6,7 +6,7 @@ category: 网络安全
 keywords: 2020, Android, Kali
 ---
 
-本文内容主要由三个部分构成，Android 刷 Kali 过程，刷机原理简单探索，Android 版本 Kali 的简单实用
+本文内容主要由三个部分构成，Android 刷 Kali 过程，刷机原理简单探索，Android 版本 Kali 的简单使用
 
 # 本教程所使用的软硬件环境
 
