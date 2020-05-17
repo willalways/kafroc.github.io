@@ -304,7 +304,7 @@ Kali 的教程网络上非常多，本文就不班门弄斧了。
 在主机抓包发现，手机的 MAC 地址确实变成 aa:bb:cc:dd:ee:ff 了。
 ![](http://kafroc.github.io/assets/img/android-kali/2020-05-13_201511.jpg)
 
-**至此本文结束，笔者水平有限，文中有任何错误，欢迎读者不吝指教**
+**由于笔者水平有限，文章难免会有错误的，欢迎读者批评指正。笔者个人邮箱：kafrocyang@gmail.com**
 
 # 参考文献
 
